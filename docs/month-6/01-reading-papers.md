@@ -418,7 +418,7 @@ RMSNorm skips the mean-centering step of LayerNorm. This makes it faster (fewer 
 - **Implement something small** from every paper you read deeply (even just one function).
 - **Discuss with others** — join a reading group or post summaries online.
 
-<ExerciseBlock title="Exercise 1: Three-Pass Reading" difficulty="beginner" hints={["Start with the abstract and conclusion", "Time yourself: don't spend more than 10 minutes on Pass 1", "For Pass 2, focus on Figures 1-3 and Table 1"]}>
+:::tip[Exercise 1: Three-Pass Reading — beginner]
 
 Apply the three-pass method to the **"Attention Is All You Need"** paper (Vaswani et al., 2017).
 
@@ -426,9 +426,18 @@ Apply the three-pass method to the **"Attention Is All You Need"** paper (Vaswan
 2. **Pass 2** (1 hour): Draw the architecture diagram from memory. List 3 things you don't fully understand.
 3. **Pass 3** (optional): Pick one component (e.g., positional encoding) and implement it from scratch.
 
-</ExerciseBlock>
+<details>
+<summary>Hints</summary>
 
-<ExerciseBlock title="Exercise 2: Implement SwiGLU" difficulty="intermediate" hints={["SwiGLU(x) = (xW₁ ⊙ Swish(xV)) W₂", "Swish(x) = x · σ(βx), where β is often set to 1", "The gating mechanism means the FFN has 3 weight matrices instead of 2"]}>
+1. Start with the abstract and conclusion
+2. Time yourself: don't spend more than 10 minutes on Pass 1
+3. For Pass 2, focus on Figures 1-3 and Table 1
+
+</details>
+
+:::
+
+:::tip[Exercise 2: Implement SwiGLU — intermediate]
 
 Read the SwiGLU section of the **LLaMA paper** (Touvron et al., 2023) or the original **"GLU Variants Improve Transformer"** paper (Shazeer, 2020).
 
@@ -436,9 +445,18 @@ Read the SwiGLU section of the **LLaMA paper** (Touvron et al., 2023) or the ori
 2. Verify the output shapes are correct.
 3. Compare the parameter count to a standard ReLU feed-forward network with the same hidden dimension.
 
-</ExerciseBlock>
+<details>
+<summary>Hints</summary>
 
-<ExerciseBlock title="Exercise 3: Paper Reproduction Log" difficulty="advanced" hints={["Pick a paper with available code for verification", "Start with the smallest experiment in the paper", "Track every decision and deviation in your log"]}>
+1. SwiGLU(x) = (xW₁ ⊙ Swish(xV)) W₂
+2. Swish(x) = x · σ(βx), where β is often set to 1
+3. The gating mechanism means the FFN has 3 weight matrices instead of 2
+
+</details>
+
+:::
+
+:::tip[Exercise 3: Paper Reproduction Log — advanced]
 
 Choose a paper published in the last 12 months. Maintain a **reproduction log** as you implement it:
 
@@ -447,18 +465,22 @@ Choose a paper published in the last 12 months. Maintain a **reproduction log** 
 3. Run the smallest experiment from the paper and compare your results.
 4. Write a 500-word summary of what you learned and what the paper leaves out.
 
-</ExerciseBlock>
+<details>
+<summary>Hints</summary>
+
+1. Pick a paper with available code for verification
+2. Start with the smallest experiment in the paper
+3. Track every decision and deviation in your log
+
+</details>
+
+:::
 
 ## Resources
 
-<ResourceCard title="How to Read a Paper" url="https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf" type="paper" author="S. Keshav" description="The classic three-pass method for reading research papers efficiently." />
-
-<ResourceCard title="Attention Is All You Need" url="https://arxiv.org/abs/1706.03762" type="paper" author="Vaswani et al." description="The foundational Transformer paper — ideal for practicing paper-reading skills." />
-
-<ResourceCard title="LLaMA: Open and Efficient Foundation Language Models" url="https://arxiv.org/abs/2302.13971" type="paper" author="Touvron et al." description="The LLaMA paper, featuring RMSNorm, SwiGLU, and RoPE — great for implementation practice." />
-
-<ResourceCard title="Papers With Code" url="https://paperswithcode.com" type="tool" description="Links papers to their official code implementations — invaluable for verification." />
-
-<ResourceCard title="Yannic Kilcher's YouTube Channel" url="https://www.youtube.com/@YannicKilcher" type="video" author="Yannic Kilcher" description="Detailed video walkthroughs of ML papers, great for building reading intuition." />
-
-<ResourceCard title="Annotated Transformer" url="https://nlp.seas.harvard.edu/annotated-transformer/" type="tutorial" author="Harvard NLP" description="Line-by-line annotated implementation of 'Attention Is All You Need'." />
+- **[How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)** _(paper)_ by S. Keshav — The classic three-pass method for reading research papers efficiently.
+- **[Attention Is All You Need](https://arxiv.org/abs/1706.03762)** _(paper)_ by Vaswani et al. — The foundational Transformer paper — ideal for practicing paper-reading skills.
+- **[LLaMA: Open and Efficient Foundation Language Models](https://arxiv.org/abs/2302.13971)** _(paper)_ by Touvron et al. — The LLaMA paper, featuring RMSNorm, SwiGLU, and RoPE — great for implementation practice.
+- **[Papers With Code](https://paperswithcode.com)** _(tool)_ — Links papers to their official code implementations — invaluable for verification.
+- **[Yannic Kilcher's YouTube Channel](https://www.youtube.com/@YannicKilcher)** _(video)_ by Yannic Kilcher — Detailed video walkthroughs of ML papers, great for building reading intuition.
+- **[Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/)** _(tutorial)_ by Harvard NLP — Line-by-line annotated implementation of 'Attention Is All You Need'.

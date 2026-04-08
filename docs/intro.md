@@ -72,10 +72,6 @@ The single biggest predictor of success is doing the exercises, not just reading
 
 ---
 
-## Track Your Progress
-
-<ProgressTracker />
-
 ---
 
 Ready to begin? [Start Month 1 →](/curriculum/month-1/what-is-ai)

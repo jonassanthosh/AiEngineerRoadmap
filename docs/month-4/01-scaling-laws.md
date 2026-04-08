@@ -358,7 +358,7 @@ Raw loss (cross-entropy on a held-out set) is a useful proxy, but what practitio
 
 ## Exercises
 
-<ExerciseBlock title="Chinchilla-Optimal Sizing" difficulty="beginner" hints={["Use C ≈ 6ND", "Chinchilla ratio is D ≈ 20N", "Solve for N in terms of C"]}>
+:::tip[Chinchilla-Optimal Sizing — beginner]
 
 You have a compute budget of \( 10^{23} \) FLOPs. Using the Chinchilla scaling law (D ≈ 20N, C ≈ 6ND), calculate the optimal model size and dataset size. How does this compare to GPT-3 (175B params, 300B tokens)?
 
@@ -373,32 +373,54 @@ From \( C = 6ND = 6 \cdot N \cdot 20N = 120N^2 \):
 
 GPT-3 used 175B params on 300B tokens with similar compute. Chinchilla says: use 6x fewer parameters but 2x more data.
 
-</ExerciseBlock>
+<details>
+<summary>Hints</summary>
 
-<ExerciseBlock title="Fit Your Own Scaling Law" difficulty="intermediate" hints={["Use scipy.optimize.curve_fit", "Try different functional forms: power law, log, polynomial", "Use log-log plotting to verify linearity"]}>
+1. Use C ≈ 6ND
+2. Chinchilla ratio is D ≈ 20N
+3. Solve for N in terms of C
+
+</details>
+
+:::
+
+:::tip[Fit Your Own Scaling Law — intermediate]
 
 Run a series of small training experiments using a simple model (e.g., a 2-layer Transformer) on a text dataset. Train models with 100K, 500K, 1M, 5M, and 10M parameters, recording the final validation loss. Fit a power law to the results and use it to predict the loss at 100M parameters. How close is your prediction?
 
-</ExerciseBlock>
+<details>
+<summary>Hints</summary>
 
-<ExerciseBlock title="Are Emergent Abilities Real?" difficulty="advanced" hints={["Consider both exact-match and continuous metrics", "Think about what 'near random' means for different tasks", "Read the Schaeffer et al. counter-argument"]}>
+1. Use scipy.optimize.curve_fit
+2. Try different functional forms: power law, log, polynomial
+3. Use log-log plotting to verify linearity
+
+</details>
+
+:::
+
+:::tip[Are Emergent Abilities Real? — advanced]
 
 Read the Wei et al. (2022) paper on emergent abilities and the Schaeffer et al. (2023) critique. Write a 500-word analysis arguing for or against the existence of emergent abilities. Consider: does the distinction between discontinuous metrics and continuous metrics resolve the debate? Are there practical implications either way?
 
-</ExerciseBlock>
+<details>
+<summary>Hints</summary>
+
+1. Consider both exact-match and continuous metrics
+2. Think about what 'near random' means for different tasks
+3. Read the Schaeffer et al. counter-argument
+
+</details>
+
+:::
 
 ---
 
 ## Resources
 
-<ResourceCard title="Scaling Laws for Neural Language Models" url="https://arxiv.org/abs/2001.08361" type="paper" author="Kaplan et al." description="The original OpenAI scaling laws paper establishing power-law relationships between loss and compute/data/parameters." />
-
-<ResourceCard title="Training Compute-Optimal Large Language Models (Chinchilla)" url="https://arxiv.org/abs/2203.15556" type="paper" author="Hoffmann et al." description="DeepMind's paper showing that models should be trained with roughly 20 tokens per parameter for compute efficiency." />
-
-<ResourceCard title="Emergent Abilities of Large Language Models" url="https://arxiv.org/abs/2206.07682" type="paper" author="Wei et al." description="Comprehensive survey of capabilities that emerge only at large scale." />
-
-<ResourceCard title="Are Emergent Abilities of LLMs a Mirage?" url="https://arxiv.org/abs/2304.15004" type="paper" author="Schaeffer et al." description="A counter-argument suggesting emergence is an artifact of metric choice." />
-
-<ResourceCard title="Scaling Laws Explained (Video)" url="https://www.youtube.com/watch?v=5Dy-JuQHVoY" type="video" author="Sasha Rush" description="An accessible walkthrough of scaling laws and their implications for LLM training." />
-
-<ResourceCard title="The Scaling Hypothesis" url="https://gwern.net/scaling-hypothesis" type="tutorial" author="Gwern" description="A deep exploration of the scaling hypothesis and what it means for AI development." />
+- **[Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)** _(paper)_ by Kaplan et al. — The original OpenAI scaling laws paper establishing power-law relationships between loss and compute/data/parameters.
+- **[Training Compute-Optimal Large Language Models (Chinchilla)](https://arxiv.org/abs/2203.15556)** _(paper)_ by Hoffmann et al. — DeepMind's paper showing that models should be trained with roughly 20 tokens per parameter for compute efficiency.
+- **[Emergent Abilities of Large Language Models](https://arxiv.org/abs/2206.07682)** _(paper)_ by Wei et al. — Comprehensive survey of capabilities that emerge only at large scale.
+- **[Are Emergent Abilities of LLMs a Mirage?](https://arxiv.org/abs/2304.15004)** _(paper)_ by Schaeffer et al. — A counter-argument suggesting emergence is an artifact of metric choice.
+- **[Scaling Laws Explained (Video)](https://www.youtube.com/watch?v=5Dy-JuQHVoY)** _(video)_ by Sasha Rush — An accessible walkthrough of scaling laws and their implications for LLM training.
+- **[The Scaling Hypothesis](https://gwern.net/scaling-hypothesis)** _(tutorial)_ by Gwern — A deep exploration of the scaling hypothesis and what it means for AI development.

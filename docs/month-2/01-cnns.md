@@ -374,13 +374,22 @@ This architecture should reach **~90% test accuracy** on CIFAR-10 within 20 epoc
 
 ## Exercises
 
-<ExerciseBlock title="Visualize Learned Filters" difficulty="beginner" hints={["Access the first conv layer weights with model.features[0].weight.data", "Normalize each filter to [0, 1] for display", "Use matplotlib's imshow with a grid layout"]}>
+:::tip[Visualize Learned Filters — beginner]
 
 After training the CIFAR-10 CNN, extract and visualize the 32 learned filters from the first convolutional layer. What patterns do you see? Do any resemble edge or color detectors?
 
-</ExerciseBlock>
+<details>
+<summary>Hints</summary>
 
-<ExerciseBlock title="Implement a Residual Block" difficulty="intermediate" hints={["The residual connection adds the input to the block output: out = F(x) + x", "If channel dimensions change, use a 1x1 conv as a projection shortcut", "Place BatchNorm after each conv, and ReLU after each BatchNorm"]}>
+1. Access the first conv layer weights with model.features[0].weight.data
+2. Normalize each filter to [0, 1] for display
+3. Use matplotlib's imshow with a grid layout
+
+</details>
+
+:::
+
+:::tip[Implement a Residual Block — intermediate]
 
 Implement a `ResidualBlock` module in PyTorch. It should support:
 - Two 3×3 convolutions with batch normalization and ReLU
@@ -389,20 +398,35 @@ Implement a `ResidualBlock` module in PyTorch. It should support:
 
 Then replace the plain conv blocks in the CIFAR-10 CNN with your residual blocks and compare accuracy.
 
-</ExerciseBlock>
+<details>
+<summary>Hints</summary>
 
-<ExerciseBlock title="Receptive Field Analysis" difficulty="advanced" hints={["The receptive field grows by (kernel_size - 1) × product_of_previous_strides at each layer", "Pooling with kernel 2 and stride 2 doubles the effective stride", "For our 3-block CNN, compute layer by layer"]}>
+1. The residual connection adds the input to the block output: out = F(x) + x
+2. If channel dimensions change, use a 1x1 conv as a projection shortcut
+3. Place BatchNorm after each conv, and ReLU after each BatchNorm
+
+</details>
+
+:::
+
+:::tip[Receptive Field Analysis — advanced]
 
 Calculate the theoretical receptive field of the final feature map in our CIFAR-10 CNN. Walk through each convolutional and pooling layer, tracking how the receptive field grows. Is the final receptive field large enough to "see" the entire 32×32 input?
 
-</ExerciseBlock>
+<details>
+<summary>Hints</summary>
+
+1. The receptive field grows by (kernel_size - 1) × product_of_previous_strides at each layer
+2. Pooling with kernel 2 and stride 2 doubles the effective stride
+3. For our 3-block CNN, compute layer by layer
+
+</details>
+
+:::
 
 ## Resources
 
-<ResourceCard title="CS231n: Convolutional Neural Networks for Visual Recognition" url="https://cs231n.stanford.edu/" type="course" author="Stanford / Andrej Karpathy" description="The gold-standard course on CNNs and computer vision. Lecture notes are freely available." />
-
-<ResourceCard title="Deep Residual Learning for Image Recognition" url="https://arxiv.org/abs/1512.03385" type="paper" author="Kaiming He et al." description="The ResNet paper — introduced skip connections and enabled training of 100+ layer networks." />
-
-<ResourceCard title="CNN Explainer" url="https://poloclub.github.io/cnn-explainer/" type="tool" description="Interactive visualization that lets you watch data flow through a CNN in real time." />
-
-<ResourceCard title="PyTorch Vision Models" url="https://pytorch.org/vision/stable/models.html" type="tutorial" description="Official documentation for all pretrained models available in torchvision." />
+- **[CS231n: Convolutional Neural Networks for Visual Recognition](https://cs231n.stanford.edu/)** _(course)_ by Stanford / Andrej Karpathy — The gold-standard course on CNNs and computer vision. Lecture notes are freely available.
+- **[Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)** _(paper)_ by Kaiming He et al. — The ResNet paper — introduced skip connections and enabled training of 100+ layer networks.
+- **[CNN Explainer](https://poloclub.github.io/cnn-explainer/)** _(tool)_ — Interactive visualization that lets you watch data flow through a CNN in real time.
+- **[PyTorch Vision Models](https://pytorch.org/vision/stable/models.html)** _(tutorial)_ — Official documentation for all pretrained models available in torchvision.

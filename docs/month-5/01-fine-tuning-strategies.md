@@ -676,13 +676,23 @@ The model will generate a response to "Explain quantum computing" and then save 
 
 ## Exercises
 
-<ExerciseBlock title="Exercise 1: LoRA Rank Ablation" difficulty="intermediate" hints={["Try ranks: 4, 8, 16, 32, 64, 128", "Use a small model like Llama-3.2-1B and a small dataset", "Track both training loss convergence speed and final eval quality", "Plot trainable parameters vs. evaluation metric for each rank"]}>
+:::tip[Exercise 1: LoRA Rank Ablation — intermediate]
 
 Fine-tune the same model on the same dataset with LoRA at ranks 4, 8, 16, 32, 64, and 128. For each rank, record: number of trainable parameters, training time, and final evaluation loss. Plot the trade-off curve. At what rank do returns diminish?
 
-</ExerciseBlock>
+<details>
+<summary>Hints</summary>
 
-<ExerciseBlock title="Exercise 2: Implement LoRA From Scratch" difficulty="advanced" hints={["Subclass nn.Module and wrap nn.Linear", "Initialize A with Kaiming uniform, B with zeros", "Don't forget the scaling factor alpha/r", "Write a function that patches all linear layers in a model"]}>
+1. Try ranks: 4, 8, 16, 32, 64, 128
+2. Use a small model like Llama-3.2-1B and a small dataset
+3. Track both training loss convergence speed and final eval quality
+4. Plot trainable parameters vs. evaluation metric for each rank
+
+</details>
+
+:::
+
+:::tip[Exercise 2: Implement LoRA From Scratch — advanced]
 
 Implement a complete LoRA wrapper module from scratch (without using the PEFT library). Your implementation should:
 1. Wrap any `nn.Linear` layer with a LoRA adapter
@@ -690,26 +700,41 @@ Implement a complete LoRA wrapper module from scratch (without using the PEFT li
 3. Include a function that walks a model's modules and replaces target layers with LoRA versions
 4. Match the output of the PEFT library on the same model and inputs
 
-</ExerciseBlock>
+<details>
+<summary>Hints</summary>
 
-<ExerciseBlock title="Exercise 3: Compare PEFT Methods" difficulty="advanced" hints={["Use PEFT library — it supports LoRA, prefix tuning, prompt tuning, and adapters", "Keep the same model, dataset, and training budget", "Compare: trainable params, training speed, eval loss, inference latency", "For prefix tuning, try prefix lengths of 10, 20, and 50"]}>
+1. Subclass nn.Module and wrap nn.Linear
+2. Initialize A with Kaiming uniform, B with zeros
+3. Don't forget the scaling factor alpha/r
+4. Write a function that patches all linear layers in a model
+
+</details>
+
+:::
+
+:::tip[Exercise 3: Compare PEFT Methods — advanced]
 
 Using the HuggingFace PEFT library, fine-tune the same base model on the same dataset using four different methods: LoRA, prefix tuning, prompt tuning, and Houlsby adapters. Compare them on training speed, memory usage, and final quality. Which method would you recommend for (a) a single high-stakes deployment, (b) serving 100 different customers with personalized models?
 
-</ExerciseBlock>
+<details>
+<summary>Hints</summary>
+
+1. Use PEFT library — it supports LoRA, prefix tuning, prompt tuning, and adapters
+2. Keep the same model, dataset, and training budget
+3. Compare: trainable params, training speed, eval loss, inference latency
+4. For prefix tuning, try prefix lengths of 10, 20, and 50
+
+</details>
+
+:::
 
 ---
 
 ## Resources
 
-<ResourceCard title="LoRA: Low-Rank Adaptation of Large Language Models" url="https://arxiv.org/abs/2106.09685" type="paper" author="Hu et al., 2021" description="The original LoRA paper — elegant, well-written, and practical." />
-
-<ResourceCard title="QLoRA: Efficient Finetuning of Quantized LLMs" url="https://arxiv.org/abs/2305.14314" type="paper" author="Dettmers et al., 2023" description="QLoRA enables 65B model fine-tuning on a single GPU. A landmark in efficiency." />
-
-<ResourceCard title="HuggingFace PEFT Library" url="https://huggingface.co/docs/peft" type="tool" description="The go-to library for parameter-efficient fine-tuning — supports LoRA, QLoRA, prefix tuning, prompt tuning, and more." />
-
-<ResourceCard title="Parameter-Efficient Transfer Learning for NLP" url="https://arxiv.org/abs/1902.00751" type="paper" author="Houlsby et al., 2019" description="The original adapter paper that started the PEFT revolution." />
-
-<ResourceCard title="Prefix-Tuning: Optimizing Continuous Prompts for Generation" url="https://arxiv.org/abs/2101.00190" type="paper" author="Li & Liang, 2021" description="Prefix tuning — prepend learnable vectors to attention layers instead of modifying weights." />
-
-<ResourceCard title="Practical Tips for Finetuning LLMs" url="https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms" type="tutorial" author="Sebastian Raschka" description="Excellent hands-on guide covering data preparation, hyperparameters, and common pitfalls." />
+- **[LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)** _(paper)_ by Hu et al., 2021 — The original LoRA paper — elegant, well-written, and practical.
+- **[QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/abs/2305.14314)** _(paper)_ by Dettmers et al., 2023 — QLoRA enables 65B model fine-tuning on a single GPU. A landmark in efficiency.
+- **[HuggingFace PEFT Library](https://huggingface.co/docs/peft)** _(tool)_ — The go-to library for parameter-efficient fine-tuning — supports LoRA, QLoRA, prefix tuning, prompt tuning, and more.
+- **[Parameter-Efficient Transfer Learning for NLP](https://arxiv.org/abs/1902.00751)** _(paper)_ by Houlsby et al., 2019 — The original adapter paper that started the PEFT revolution.
+- **[Prefix-Tuning: Optimizing Continuous Prompts for Generation](https://arxiv.org/abs/2101.00190)** _(paper)_ by Li & Liang, 2021 — Prefix tuning — prepend learnable vectors to attention layers instead of modifying weights.
+- **[Practical Tips for Finetuning LLMs](https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms)** _(tutorial)_ by Sebastian Raschka — Excellent hands-on guide covering data preparation, hyperparameters, and common pitfalls.
