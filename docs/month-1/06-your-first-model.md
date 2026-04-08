@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 title: "Build Your First Neural Network"
 slug: your-first-model
 ---

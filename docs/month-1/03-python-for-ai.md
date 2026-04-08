@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 title: "Python for AI Engineering"
 slug: python-for-ai
 ---
@@ -12,6 +12,10 @@ slug: python-for-ai
 - Data loading and manipulation with Pandas
 - Matplotlib for visualization
 - Writing clean, efficient ML experiment code
+:::
+
+:::note[Prerequisites]
+[Python Essentials](/curriculum/month-1/python-essentials) — you should be comfortable with Python syntax, data structures, functions, and classes before starting this lesson.
 :::
 
 **Estimated time:** Reading: ~40 min | Exercises: ~3 hours

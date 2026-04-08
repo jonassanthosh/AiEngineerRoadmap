@@ -14,11 +14,12 @@ This month builds your foundation. You'll understand what AI is, learn the math 
 |--------|-------|
 | 1 | [What Is Artificial Intelligence?](what-is-ai) — history, types, and where the field is today |
 | 2 | [Math Foundations](math-foundations) — linear algebra, calculus, and probability for ML |
-| 3 | [Python for AI](python-for-ai) — NumPy, data manipulation, and plotting |
-| 4 | [Intro to Machine Learning](intro-to-ml) — supervised vs. unsupervised, bias-variance, evaluation |
-| 5 | [Neural Networks Introduction](neural-networks-intro) — perceptrons, backpropagation, activation functions |
-| 6 | [Your First Model](your-first-model) — building and training a neural network end to end |
-| 7 | [**Project: MNIST Digit Classifier**](month1-project) — a complete image classification pipeline |
+| 3 | [Python Essentials](python-essentials) — setup, data structures, functions, classes, and patterns |
+| 4 | [Python for AI](python-for-ai) — NumPy, Pandas, and Matplotlib |
+| 5 | [Intro to Machine Learning](intro-to-ml) — supervised vs. unsupervised, bias-variance, evaluation |
+| 6 | [Neural Networks Introduction](neural-networks-intro) — perceptrons, backpropagation, activation functions |
+| 7 | [Your First Model](your-first-model) — building and training a neural network end to end |
+| 8 | [**Project: MNIST Digit Classifier**](month1-project) — a complete image classification pipeline |
 
 ## Prerequisites
 

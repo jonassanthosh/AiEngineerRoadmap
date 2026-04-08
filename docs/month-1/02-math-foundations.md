@@ -957,4 +957,4 @@ Then implement a function that computes cross-entropy loss for an arbitrary numb
 
 ---
 
-**Next up**: Now that we have the mathematical foundations, let's learn the tools we'll use to implement everything — Python, NumPy, Pandas, and Matplotlib.
+**Next up**: Now that we have the mathematical foundations, let's set up Python and learn the language itself — variables, data structures, functions, classes, and the patterns you'll see in every ML codebase.
