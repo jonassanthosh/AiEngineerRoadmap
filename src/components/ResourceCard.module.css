@@ -1,0 +1,69 @@
+.card {
+  display: block;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin: 0.75rem 0;
+  text-decoration: none;
+  color: inherit;
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--custom-card-shadow);
+  transition: border-color var(--custom-transition),
+    box-shadow var(--custom-transition),
+    transform var(--custom-transition);
+}
+
+.card:hover {
+  border-color: var(--ifm-color-primary-light);
+  box-shadow: var(--custom-card-shadow-hover);
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  color: #fff;
+}
+
+.arrow {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-400);
+  transition: transform var(--custom-transition), color var(--custom-transition);
+}
+
+.card:hover .arrow {
+  transform: translate(2px, -2px);
+  color: var(--ifm-color-primary);
+}
+
+.title {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.author {
+  margin: 0 0 0.35rem;
+  font-size: 0.825rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.description {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+}

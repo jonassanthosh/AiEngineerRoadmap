@@ -1,0 +1,15 @@
+resources:
+  label: Resources
+  description: Curated learning resources
+learning:
+  label: Learning
+  description: Learning paths and study tips
+papers:
+  label: Papers
+  description: Research paper reading lists
+research:
+  label: Research
+  description: AI research and analysis
+video:
+  label: Video
+  description: Video courses and lectures

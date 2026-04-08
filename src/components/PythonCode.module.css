@@ -1,0 +1,27 @@
+.wrapper {
+  position: relative;
+  margin: 1.25rem 0;
+}
+
+.colabButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: background var(--custom-transition);
+}
+
+.colabButton:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.colabButton img {
+  height: 22px;
+  transition: opacity var(--custom-transition);
+}
+
+.colabButton:hover img {
+  opacity: 0.9;
+}

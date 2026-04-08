@@ -1,0 +1,101 @@
+.tracker {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--custom-card-shadow);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.heading {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.pct {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.bar {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--ifm-color-emphasis-200);
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--ifm-color-primary),
+    var(--ifm-color-primary-light)
+  );
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.months {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.5rem;
+}
+
+.month {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color var(--custom-transition),
+    background var(--custom-transition),
+    box-shadow var(--custom-transition);
+  color: var(--ifm-font-color-base);
+}
+
+.month:hover {
+  border-color: var(--ifm-color-primary-light);
+  box-shadow: 0 0 0 1px var(--ifm-color-primary-light);
+}
+
+.month.done {
+  border-color: var(--ifm-color-primary);
+  background: color-mix(in srgb, var(--ifm-color-primary) 8%, transparent);
+  box-shadow: 0 0 0 1px var(--ifm-color-primary);
+}
+
+.check {
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.month.done .check {
+  color: var(--ifm-color-primary);
+}
+
+.label {
+  font-weight: 600;
+  font-size: 0.825rem;
+}
+
+.subtitle {
+  font-size: 0.725rem;
+  color: var(--ifm-color-emphasis-600);
+  line-height: 1.4;
+}
