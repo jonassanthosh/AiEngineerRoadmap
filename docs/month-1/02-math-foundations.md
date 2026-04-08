@@ -7,6 +7,19 @@ slug: math-foundations
 
 # Math Foundations for AI
 
+:::info[What You'll Learn]
+- Vectors, matrices, and the operations needed for neural networks
+- Derivatives and gradients for backpropagation
+- Probability distributions and Bayes' theorem
+- How these mathematical concepts connect to real ML algorithms
+:::
+
+**Estimated time:** Reading: ~45 min | Exercises: ~3 hours
+
+:::note[Prerequisites]
+This lesson is self-contained — no prior math beyond high-school algebra is assumed.
+:::
+
 You don't need a math PhD to be an effective AI engineer, but you *do* need fluency in three areas: **linear algebra**, **calculus**, and **probability**. These aren't arbitrary prerequisites—they are the language in which machine learning is written. Every neural network is a composition of matrix multiplications (linear algebra), trained by following gradients (calculus) on a loss function defined over probabilistic predictions (probability).
 
 This chapter gives you the working knowledge you need. We'll connect every concept to its ML application so you can see *why* it matters.

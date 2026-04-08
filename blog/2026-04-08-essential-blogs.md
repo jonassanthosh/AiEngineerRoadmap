@@ -18,7 +18,6 @@ By Lilian Weng (OpenAI). Widely considered the best technical AI blog on the int
 - [LLM Powered Autonomous Agents](https://lilianweng.github.io/posts/2023-06-23-agent/) — The definitive guide to building agent systems with LLMs
 - [The Transformer Family v2](https://lilianweng.github.io/posts/2023-01-27-the-transformer-family-v2/) — Comprehensive survey of every major Transformer variant
 - [Prompt Engineering](https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/) — Deep dive into prompting techniques
-- [Anti-hype LLM Reading List](https://gist.github.com/veekaybee/be375ab33085102f9027853128dc5f0e) — Companion curated reading list
 - [Extrinsic Hallucinations in LLMs](https://lilianweng.github.io/posts/2024-07-07-hallucination/) — Understanding and mitigating hallucination
 - [Reward Hacking in RLHF](https://lilianweng.github.io/posts/2024-11-28-reward-hacking/) — When RL goes wrong
 - [Thinking Tokens: Test-Time Compute](https://lilianweng.github.io/posts/2025-05-01-thinking/) — Chain-of-thought and inference-time scaling
@@ -110,6 +109,7 @@ Official blog from the open-source ML platform. Model releases, tutorials, and t
 
 ## Individual Posts Worth Bookmarking
 
+- [Anti-hype LLM Reading List](https://gist.github.com/veekaybee/be375ab33085102f9027853128dc5f0e) — Vicki Boykis's curated, no-nonsense reading list for understanding LLMs
 - [The Attention Arms Race](https://www.getmaxim.ai/blog/the-attention-arms-race-how-modern-open-source-llms-are-reinventing-the-transformers-core/) — Comparing attention variants in Llama 4, DeepSeek V3, Qwen3, MiniMax-M1 (2026)
 - [LoRA Deep Dive: Mechanics & Pitfalls](https://kuriko-iwai.com/lora-llm-fine-tuning-mechanics-guide) — Thorough LoRA walkthrough with math
 - [Transformers from Scratch (10-day course)](https://machinelearningmastery.com/building-transformer-models-from-scratch-with-pytorch-10-day-mini-course/) — Hands-on PyTorch mini-course

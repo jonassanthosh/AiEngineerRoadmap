@@ -7,6 +7,19 @@ title: "Safety, Alignment, and Responsible AI"
 
 # Safety, Alignment, and Responsible AI
 
+:::info[What You'll Learn]
+- Threat models for LLM deployment (jailbreaks, prompt injection, data poisoning)
+- Red-teaming methodology
+- RLHF failure modes and reward hacking
+- Responsible deployment practices
+:::
+
+:::note[Prerequisites]
+[RLHF](/curriculum/month-5/rlhf) from Month 5 and [Evaluation](evaluation) from this month.
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~2 hours
+
 Building capable AI systems is only half the challenge — ensuring those systems behave safely, align with human intentions, and avoid harm is equally critical. This lesson covers the technical methods and engineering practices behind AI safety, from the fundamental alignment problem to practical guardrail implementations.
 
 ## The Alignment Problem

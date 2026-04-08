@@ -7,6 +7,20 @@ title: "Tokenizers: BPE, WordPiece, and SentencePiece"
 
 # Tokenizers: BPE, WordPiece, and SentencePiece
 
+:::info[What You'll Learn]
+- Why tokenization matters for LLM performance
+- Byte-pair encoding (BPE) algorithm step by step
+- WordPiece and SentencePiece alternatives
+- Training your own tokenizer
+- Tokenizer quirks and their effects on model behavior
+:::
+
+:::note[Prerequisites]
+[Text Preprocessing](/curriculum/month-3/text-preprocessing) from Month 3.
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~3 hours
+
 Tokenization is the first step in any language model pipeline and one of the most consequential. The choice of tokenizer affects model performance, multilingual capability, arithmetic ability, and even how many API dollars you spend. Yet it's often glossed over. In this lesson, we'll build a deep understanding of how modern tokenizers work, implement one from scratch, and explore the tradeoffs involved.
 
 ## Why Tokenization Matters

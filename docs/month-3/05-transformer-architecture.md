@@ -7,6 +7,20 @@ title: "The Transformer Architecture"
 
 # The Transformer Architecture
 
+:::info[What You'll Learn]
+- Self-attention and why it replaces recurrence
+- Scaled dot-product attention and multi-head attention
+- Positional encoding for sequence order
+- The full encoder-decoder Transformer architecture
+- Residual connections and layer normalization
+:::
+
+:::note[Prerequisites]
+[Attention Mechanism](attention-mechanism) from this month and [Math Foundations](/curriculum/month-1/math-foundations) from Month 1.
+:::
+
+**Estimated time:** Reading: ~50 min | Exercises: ~3 hours
+
 The Transformer, introduced in the 2017 paper **"Attention Is All You Need"** by Vaswani et al., is the architecture behind virtually every modern language model — GPT, BERT, T5, LLaMA, and hundreds more. It replaced recurrence entirely with **self-attention**, enabling massive parallelization and dramatically improving performance on sequence tasks.
 
 This is the most important lesson in Month 3. Take your time with it.

@@ -7,6 +7,20 @@ title: "Training Infrastructure"
 
 # Training Infrastructure
 
+:::info[What You'll Learn]
+- Data parallelism and model parallelism
+- Mixed-precision training (FP16/BF16)
+- Gradient accumulation for large effective batch sizes
+- Distributed training with PyTorch
+- Hardware considerations (GPUs, TPUs, memory)
+:::
+
+:::note[Prerequisites]
+[GPT Architecture](gpt-architecture) and [Scaling Laws](scaling-laws) from this month.
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~2 hours
+
 Training a modern LLM requires distributing computation across dozens to thousands of GPUs. A single GPU cannot hold even a medium-sized model in memory, let alone train it efficiently. This lesson covers the hardware landscape, the key parallelism strategies, and the practical tools for distributed training.
 
 ## The Hardware Landscape

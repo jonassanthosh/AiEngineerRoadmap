@@ -7,6 +7,19 @@ title: "Architecture Innovations"
 
 # Architecture Innovations
 
+:::info[What You'll Learn]
+- Grouped-query attention (GQA) and multi-query attention
+- Mixture-of-experts (MoE) architectures
+- State-space models (Mamba) and alternatives to attention
+- Recent architectural trends and where the field is heading
+:::
+
+:::note[Prerequisites]
+[The Transformer Architecture](/curriculum/month-3/transformer-architecture) and [GPT Architecture](/curriculum/month-4/gpt-architecture).
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~3 hours
+
 The original Transformer has been relentlessly improved since 2017. This lesson covers the most important architectural innovations that power today's state-of-the-art models — from sparse expert routing to sub-quadratic sequence modeling. Understanding these innovations is critical for anyone designing or modifying model architectures.
 
 ## Rotary Position Embeddings (RoPE)

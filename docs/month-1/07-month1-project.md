@@ -7,6 +7,15 @@ slug: month1-project
 
 # Month 1 Project: MNIST Digit Classifier
 
+:::info[What You'll Learn]
+- Loading and preprocessing the MNIST dataset
+- Designing a neural network architecture
+- Implementing a full training and evaluation pipeline
+- Experimenting with hyperparameters to improve accuracy
+:::
+
+**Estimated time:** Reading: ~30 min | Project work: ~8 hours
+
 Congratulations on making it through the foundations! It's time to put everything together in a real project. You'll build a neural network that recognizes handwritten digits from the **MNIST dataset**—the "Hello, World!" of deep learning.
 
 By the end of this project, you'll have a model that achieves **>97% accuracy** on 10,000 test images it has never seen. More importantly, you'll understand every piece of the pipeline: data loading, preprocessing, model architecture, training, evaluation, and experimentation.

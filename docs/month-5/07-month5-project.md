@@ -7,6 +7,19 @@ title: "Project: Fine-Tune and Deploy an LLM"
 
 # Project: Fine-Tune and Deploy an LLM
 
+:::info[What You'll Learn]
+- Fine-tuning a base model with QLoRA on custom data
+- Merging and quantizing the fine-tuned model
+- Deploying as a REST API with vLLM or Ollama
+- Building an evaluation pipeline to measure model quality
+:::
+
+:::note[Prerequisites]
+All of Month 5 lessons 1–6.
+:::
+
+**Estimated time:** Reading: ~25 min | Project work: ~10 hours
+
 This capstone project integrates everything from Month 5. You'll take a base model, fine-tune it with LoRA on a custom instruction dataset, quantize the result, deploy it as an API, and evaluate the final model. This is the end-to-end workflow used by teams shipping LLM-powered products.
 
 ## Project Overview

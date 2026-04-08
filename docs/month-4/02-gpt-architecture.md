@@ -7,6 +7,19 @@ title: "The GPT Architecture"
 
 # The GPT Architecture
 
+:::info[What You'll Learn]
+- Decoder-only Transformer architecture
+- Causal (autoregressive) self-attention masking
+- How GPT generates text token by token
+- The evolution from GPT-1 to GPT-4
+:::
+
+:::note[Prerequisites]
+[Scaling Laws](scaling-laws) from this month and [The Transformer Architecture](/curriculum/month-3/transformer-architecture) from Month 3.
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~3 hours
+
 GPT (Generative Pre-trained Transformer) is the most influential family of language models. Its core idea is simple but powerful: take the Transformer decoder, train it on massive text corpora to predict the next token, and scale it up. This lesson walks through the architecture, its evolution from GPT-1 to GPT-3, and shows you how to build a GPT block from scratch in PyTorch.
 
 ## Decoder-Only Transformer Recap

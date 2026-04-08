@@ -7,6 +7,19 @@ title: "Pruning and Knowledge Distillation"
 
 # Pruning and Knowledge Distillation
 
+:::info[What You'll Learn]
+- Structured vs. unstructured pruning
+- Magnitude pruning and lottery ticket hypothesis
+- Knowledge distillation: training a small model to mimic a large one
+- Combining pruning, distillation, and quantization
+:::
+
+:::note[Prerequisites]
+[Quantization](quantization) from this month.
+:::
+
+**Estimated time:** Reading: ~30 min | Exercises: ~2 hours
+
 Quantization reduces the precision of each weight. **Pruning** removes weights entirely. **Knowledge distillation** trains a smaller model to mimic a larger one. These three techniques — quantization, pruning, and distillation — form the core toolkit for model compression.
 
 ## Weight Pruning

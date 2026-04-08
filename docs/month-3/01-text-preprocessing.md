@@ -7,6 +7,19 @@ title: "Text Preprocessing"
 
 # Text Preprocessing
 
+:::info[What You'll Learn]
+- Tokenization strategies (word, subword, character)
+- Text cleaning and normalization techniques
+- Building vocabularies and handling unknown tokens
+- Preparing text data for neural network input
+:::
+
+:::note[Prerequisites]
+[Python for AI](/curriculum/month-1/python-for-ai) and [Neural Networks Introduction](/curriculum/month-1/neural-networks-intro) from Month 1.
+:::
+
+**Estimated time:** Reading: ~30 min | Exercises: ~2 hours
+
 Before any NLP model can understand text, that text must be transformed from raw strings into structured numerical representations. Text preprocessing is the critical first step in every NLP pipeline — and getting it right has a disproportionate effect on model performance.
 
 In this lesson, you'll learn the core preprocessing techniques that underpin all modern NLP work, from classical bag-of-words models to the tokenizers used by GPT and BERT.
@@ -473,76 +486,32 @@ Notice how "revolutionized" is split into "revolution" + "##ized" — that's Wor
 
 ## Exercises
 
-:::tip[Exercise 1: Custom Tokenizer Comparison — beginner]
+<ExerciseBlock title="Exercise 1: Custom Tokenizer Comparison" difficulty="beginner" hints={["Use Python's split(), re.findall(), and list() for the three approaches", "Count unique tokens with set()"]}>
 
 Write a function that takes a sentence and returns three tokenizations: word-level, character-level, and whitespace-only. Compare the vocabulary sizes for the sentence: *"The quick brown fox jumps over the lazy dog. The fox was very quick!"*
 
-<details>
-<summary>Hints</summary>
+</ExerciseBlock>
 
-1. Use Python's split(), re.findall(), and list() for the three approaches
-2. Count unique tokens with set()
-
-</details>
-
-:::
-
-:::tip[Exercise 2: Preprocessing Impact Analysis — intermediate]
+<ExerciseBlock title="Exercise 2: Preprocessing Impact Analysis" difficulty="intermediate" hints={["Try scikit-learn's CountVectorizer with different preprocessing", "Measure vocabulary size and document similarity before/after each step", "Use cosine similarity from sklearn.metrics.pairwise"]}>
 
 Take 5 news headlines and measure how cosine similarity (using bag-of-words vectors) changes as you apply each preprocessing step incrementally: (1) lowercasing, (2) removing punctuation, (3) removing stop words, (4) lemmatization. Which step has the biggest impact on the similarity matrix?
 
-<details>
-<summary>Hints</summary>
+</ExerciseBlock>
 
-1. Try scikit-learn's CountVectorizer with different preprocessing
-2. Measure vocabulary size and document similarity before/after each step
-3. Use cosine similarity from sklearn.metrics.pairwise
-
-</details>
-
-:::
-
-:::tip[Exercise 3: Build a BPE Tokenizer — advanced]
-
-": 5, "l o w e r </w>": 2, "n e w e s t </w>": 6, "w i d e s t </w>": 3}
-
-num_merges = 10
-for i in range(num_merges):
-    pairs = get_pair_counts(corpus)
-    if not pairs:
-        break
-    best_pair = max(pairs, key=pairs.get)
-    corpus = merge_pair(best_pair, corpus)
-    print(f"Merge {i+1}: {best_pair} -> {''.join(best_pair)}")
-
-print("\\nFinal vocabulary:")
-for word, freq in corpus.items():
-    print(f"  {word} (freq={freq})")
-```
-}>
+<ExerciseBlock title="Exercise 3: Build a BPE Tokenizer" difficulty="advanced" hints={["Start with character-level tokens", "Count all adjacent pairs in the corpus", "Merge the most frequent pair and repeat", "Track your merge rules — they define the tokenizer"]}>
 
 Implement the Byte Pair Encoding algorithm from scratch. Start with a small corpus, represent each word as a sequence of characters plus an end-of-word marker `</w>`, and iteratively merge the most frequent pair. Run 10 merge operations and print the resulting vocabulary.
 
-<details>
-<summary>Hints</summary>
-
-1. Start with character-level tokens
-2. Count all adjacent pairs in the corpus
-3. Merge the most frequent pair and repeat
-4. Track your merge rules — they define the tokenizer
-
-</details>
-
-:::
+</ExerciseBlock>
 
 ---
 
 ## Resources
 
-- **[NLTK Documentation](https://www.nltk.org/)** _(tool)_ — The classic Python NLP library — extensive tokenizers, stemmers, and corpora.
+<ResourceCard title="NLTK Documentation" url="https://www.nltk.org/" type="tool" description="The classic Python NLP library — extensive tokenizers, stemmers, and corpora." />
 
-- **[Hugging Face Tokenizers](https://huggingface.co/docs/tokenizers/)** _(tool)_ — Fast, production-ready tokenizers including BPE, WordPiece, and Unigram.
+<ResourceCard title="Hugging Face Tokenizers" url="https://huggingface.co/docs/tokenizers/" type="tool" description="Fast, production-ready tokenizers including BPE, WordPiece, and Unigram." />
 
-- **[A Visual Guide to Tokenization](https://www.youtube.com/watch?v=zduSFxRajkE)** _(video)_ by Andrej Karpathy — Karpathy's deep dive into tokenization and why it matters for LLMs.
+<ResourceCard title="A Visual Guide to Tokenization" url="https://www.youtube.com/watch?v=zduSFxRajkE" type="video" author="Andrej Karpathy" description="Karpathy's deep dive into tokenization and why it matters for LLMs." />
 
-- **[Neural Machine Translation of Rare Words with Subword Units](https://arxiv.org/abs/1508.07909)** _(paper)_ by Sennrich et al., 2016 — The paper that introduced BPE for NLP.
+<ResourceCard title="Neural Machine Translation of Rare Words with Subword Units" url="https://arxiv.org/abs/1508.07909" type="paper" author="Sennrich et al., 2016" description="The paper that introduced BPE for NLP." />

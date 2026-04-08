@@ -7,6 +7,16 @@ slug: neural-networks-intro
 
 # Introduction to Neural Networks
 
+:::info[What You'll Learn]
+- How a single perceptron works
+- Activation functions and why they matter
+- Forward propagation step by step
+- Backpropagation and gradient descent
+- Building a network from individual neurons
+:::
+
+**Estimated time:** Reading: ~45 min | Exercises: ~3 hours
+
 Neural networks are the foundation of modern AI. Every large language model, every image classifier, every AI system making headlines is built from neural networks. In this chapter, we'll build your understanding from the ground up: from a single artificial neuron to multi-layer networks, and from forward passes to the backpropagation algorithm that makes learning possible.
 
 ## Biological Inspiration

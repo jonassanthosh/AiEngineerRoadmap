@@ -7,6 +7,20 @@ title: "RNNs and LSTMs"
 
 # Recurrent Neural Networks and LSTMs
 
+:::info[What You'll Learn]
+- Why sequential data needs special architectures
+- Vanilla RNNs and the vanishing gradient problem
+- LSTM gates (forget, input, output) and how they solve it
+- GRUs as a simpler alternative
+- Bidirectional and stacked RNNs
+:::
+
+:::note[Prerequisites]
+[Neural Networks Introduction](/curriculum/month-1/neural-networks-intro) from Month 1.
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~3 hours
+
 Language, audio, and time series all share a defining property: **order matters**. The sentence "dog bites man" means something very different from "man bites dog." Standard feedforward networks treat inputs as fixed-size vectors with no notion of sequence — they cannot model this ordering. Recurrent Neural Networks (RNNs) were designed precisely for sequential data.
 
 ## Why Vanilla Neural Networks Fail on Sequences

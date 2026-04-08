@@ -7,7 +7,7 @@ import rehypeKatex from 'rehype-katex';
 const config: Config = {
   title: 'AI Engineering Academy',
   tagline: 'From beginner to AI engineer in 6 months',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   future: {
     v4: true,
@@ -72,7 +72,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/social-card.png',
+    image: 'img/logo.svg',
     colorMode: {
       defaultMode: 'dark',
       respectPrefersColorScheme: true,
@@ -140,7 +140,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} AI Engineering Academy. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

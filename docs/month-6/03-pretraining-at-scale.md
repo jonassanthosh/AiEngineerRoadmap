@@ -7,6 +7,19 @@ title: "Pretraining at Scale"
 
 # Pretraining at Scale
 
+:::info[What You'll Learn]
+- Data curation and quality filtering at scale
+- Training recipes (learning rate, batch size, sequence length scheduling)
+- Stability techniques for large training runs
+- When and how to use curriculum learning
+:::
+
+:::note[Prerequisites]
+[Training Infrastructure](/curriculum/month-4/training-infrastructure), [Scaling Laws](/curriculum/month-4/scaling-laws), and [nanoGPT](/curriculum/month-4/nanogpt) from Month 4.
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~2 hours
+
 Pretraining a large language model is one of the most demanding engineering challenges in ML. It requires curating trillions of tokens, orchestrating hundreds of GPUs for weeks or months, and maintaining stable training through countless potential failure modes. This lesson covers the full pipeline from raw web data to a trained base model.
 
 ## The Pretraining Data Pipeline

@@ -7,6 +7,19 @@ title: "Loss Functions and Optimizers"
 
 # Loss Functions and Optimizers
 
+:::info[What You'll Learn]
+- Cross-entropy, MSE, and when to use each loss function
+- SGD, Adam, and AdamW optimizers
+- Learning rate schedules and warm-up strategies
+- How optimizer choice affects convergence
+:::
+
+:::note[Prerequisites]
+[Math Foundations](/curriculum/month-1/math-foundations) (gradients) and [Neural Networks Introduction](/curriculum/month-1/neural-networks-intro) from Month 1.
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~2 hours
+
 Training a neural network means finding parameters that minimize a **loss function** — a scalar measure of how wrong the model's predictions are. The **optimizer** is the algorithm that updates those parameters using the loss's gradients. Choosing the right loss and optimizer is just as important as choosing the right architecture.
 
 ## Loss Functions

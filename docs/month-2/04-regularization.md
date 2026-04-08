@@ -7,6 +7,20 @@ title: "Regularization Techniques"
 
 # Regularization Techniques
 
+:::info[What You'll Learn]
+- Dropout and how it prevents co-adaptation
+- Weight decay and L2 regularization
+- Batch normalization and layer normalization
+- Data augmentation techniques
+- Early stopping and how to use validation curves
+:::
+
+:::note[Prerequisites]
+[Loss Functions & Optimizers](loss-and-optimizers) from this month.
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~2 hours
+
 A model that memorizes the training data but fails on unseen data is useless. **Regularization** is the collection of techniques that fight overfitting — the gap between training performance and test performance. This chapter covers the most important ones, from classical penalty terms to modern architectural tricks.
 
 ## Overfitting Revisited

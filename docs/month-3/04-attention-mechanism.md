@@ -7,6 +7,19 @@ title: "The Attention Mechanism"
 
 # The Attention Mechanism
 
+:::info[What You'll Learn]
+- The information bottleneck problem in seq2seq
+- How attention computes alignment scores
+- Bahdanau (additive) vs. Luong (multiplicative) attention
+- Visualizing and interpreting attention weights
+:::
+
+:::note[Prerequisites]
+[Seq2Seq Models](seq2seq) from this month.
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~2 hours
+
 In the previous lesson, we saw how seq2seq models compress an entire input sequence into a single fixed-length context vector. This creates an information bottleneck — long sequences lose critical details. The **attention mechanism** solves this by allowing the decoder to look back at *all* encoder hidden states and dynamically focus on the most relevant parts of the input at each decoding step.
 
 Attention is arguably the single most important idea in modern deep learning. It powers Transformers, which power GPT, BERT, and every major language model today.

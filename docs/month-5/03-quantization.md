@@ -7,6 +7,19 @@ title: "Quantization"
 
 # Quantization
 
+:::info[What You'll Learn]
+- How floating-point precision affects model size and speed
+- INT8 and INT4 quantization techniques
+- Post-training quantization (GPTQ, AWQ) vs. quantization-aware training
+- Practical trade-offs: quality vs. speed vs. memory
+:::
+
+:::note[Prerequisites]
+[Fine-Tuning Strategies](fine-tuning-strategies) from this month and [Training Infrastructure](/curriculum/month-4/training-infrastructure) from Month 4.
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~3 hours
+
 A 70B-parameter model in FP16 requires **140 GB** of memory — more than fits on any single consumer GPU. Quantization shrinks models by representing weights (and sometimes activations) with fewer bits, reducing memory usage and increasing inference speed with minimal quality loss.
 
 Quantization is the single most impactful optimization for making LLMs practical. It's how you run a 70B model on a 24GB GPU, or a 7B model on a phone.

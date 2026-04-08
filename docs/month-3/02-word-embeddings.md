@@ -7,6 +7,19 @@ title: "Word Embeddings"
 
 # Word Embeddings
 
+:::info[What You'll Learn]
+- Why one-hot encoding fails for language
+- Word2Vec (skip-gram and CBOW) and how it learns
+- GloVe and global co-occurrence statistics
+- Using pretrained embeddings in your models
+:::
+
+:::note[Prerequisites]
+[Text Preprocessing](text-preprocessing) from this month and [Math Foundations](/curriculum/month-1/math-foundations) from Month 1.
+:::
+
+**Estimated time:** Reading: ~30 min | Exercises: ~2 hours
+
 In the previous lesson we turned text into tokens. But models need **numbers**, not strings. How do we represent words as vectors in a way that captures their meaning? Word embeddings are the answer — and they're one of the most important ideas in modern NLP.
 
 ## The Problem: Representing Words as Numbers

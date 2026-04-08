@@ -7,6 +7,15 @@ slug: your-first-model
 
 # Build Your First Neural Network
 
+:::info[What You'll Learn]
+- Building a neural network in PyTorch from scratch
+- The training loop: forward pass, loss, backward pass, optimizer step
+- Tracking and visualizing training progress
+- Debugging common training issues
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~3 hours
+
 Theory is essential, but understanding really clicks when you build something yourself. In this chapter, you'll implement a neural network **twice**: first from scratch using only NumPy, then using PyTorch. By comparing the two, you'll understand both *what* high-level frameworks do for you and *why* they do it that way.
 
 We'll tackle a binary classification problem: the classic "two moons" dataset.

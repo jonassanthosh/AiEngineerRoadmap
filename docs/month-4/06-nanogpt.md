@@ -7,6 +7,19 @@ title: "Pretraining a Small GPT (nanoGPT)"
 
 # Pretraining a Small GPT (nanoGPT)
 
+:::info[What You'll Learn]
+- Building a complete GPT model in PyTorch from scratch
+- Implementing the training loop with gradient accumulation
+- Text generation with temperature and top-k sampling
+- Debugging and monitoring training runs
+:::
+
+:::note[Prerequisites]
+All Month 4 lessons 1–5 and [Transformer from Scratch](/curriculum/month-3/transformer-from-scratch) from Month 3.
+:::
+
+**Estimated time:** Reading: ~45 min | Exercises: ~4 hours
+
 Theory is essential, but there's no substitute for training a language model yourself. In this lesson, we'll walk through Andrej Karpathy's **nanoGPT** — a clean, minimal implementation of GPT that you can train on a single GPU. By the end, you'll have trained a model that generates coherent text and understand every line of the training pipeline.
 
 :::tip[Prerequisite]

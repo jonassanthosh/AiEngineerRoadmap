@@ -1,2 +1,5 @@
 default:
   name: AI Engineering Academy
+  title: Open AI Curriculum
+  url: https://github.com/ai-engineering-academy
+  image_url: /img/logo.svg

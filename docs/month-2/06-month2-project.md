@@ -7,6 +7,19 @@ title: "Project: Sentiment Analysis"
 
 # Project: Sentiment Analysis on IMDB Reviews
 
+:::info[What You'll Learn]
+- Building an LSTM-based text classifier end to end
+- Applying regularization to prevent overfitting
+- Using learning rate scheduling for better convergence
+- Evaluating model quality with multiple metrics
+:::
+
+:::note[Prerequisites]
+All of Month 2 lessons 1–5.
+:::
+
+**Estimated time:** Reading: ~25 min | Project work: ~8 hours
+
 This capstone project ties together everything from Month 2. You'll build an **LSTM-based sentiment classifier** that reads movie reviews and predicts whether they're positive or negative. Along the way, you'll practice data preprocessing, model design, training with regularization, evaluation, and error analysis.
 
 :::info[What You'll Practice]

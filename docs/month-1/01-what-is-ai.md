@@ -7,6 +7,16 @@ slug: what-is-ai
 
 # What Is Artificial Intelligence?
 
+:::info[What You'll Learn]
+- The history of AI from Turing to foundation models
+- AI winters and their lessons for modern practitioners
+- Types of AI: narrow vs. general vs. superintelligence
+- The difference between AI, ML, deep learning, and generative AI
+- What AI engineering means as a career
+:::
+
+**Estimated time:** Reading: ~30 min | Exercises: ~2 hours
+
 Artificial intelligence is one of the most transformative technologies in human history—and also one of the most misunderstood. Before we write a single line of code, we need to understand what AI actually *is*, where it came from, and where it's heading. This chapter gives you the conceptual foundation that separates an AI engineer from someone who merely calls APIs.
 
 ## A Brief History of AI
@@ -234,7 +244,7 @@ Orchestration Layer:
 
 ## Exercises
 
-:::tip[Exercise 1: AI System Taxonomy — beginner]
+<ExerciseBlock title="Exercise 1: AI System Taxonomy" difficulty="beginner" hints={["Think about what input each system takes and what output it produces.", "Consider whether the system needs to generalize across domains or only works within one."]}>
 
 Classify each of the following as narrow AI, and explain what specific task each is optimized for:
 
@@ -246,17 +256,9 @@ Classify each of the following as narrow AI, and explain what specific task each
 
 For each one, describe a task *outside* its domain that it could not perform without retraining.
 
-<details>
-<summary>Hints</summary>
+</ExerciseBlock>
 
-1. Think about what input each system takes and what output it produces.
-2. Consider whether the system needs to generalize across domains or only works within one.
-
-</details>
-
-:::
-
-:::tip[Exercise 2: Turing Test Debate — intermediate]
+<ExerciseBlock title="Exercise 2: Turing Test Debate" difficulty="intermediate" hints={["Consider what 'intelligence' means—is it about behavior or understanding?", "Look up the Chinese Room argument by John Searle.", "Think about whether passing the Turing Test requires consciousness."]}>
 
 Write a 300-word essay arguing either *for* or *against* the following claim:
 
@@ -264,32 +266,15 @@ Write a 300-word essay arguing either *for* or *against* the following claim:
 
 Support your argument with specific examples and address at least one counterargument.
 
-<details>
-<summary>Hints</summary>
+</ExerciseBlock>
 
-1. Consider what 'intelligence' means—is it about behavior or understanding?
-2. Look up the Chinese Room argument by John Searle.
-3. Think about whether passing the Turing Test requires consciousness.
-
-</details>
-
-:::
-
-:::tip[Exercise 3: AI Timeline Research — beginner]
+<ExerciseBlock title="Exercise 3: AI Timeline Research" difficulty="beginner" hints={["Use Wikipedia, arxiv.org, and the resources below as starting points.", "Focus on why each milestone mattered, not just what happened."]}>
 
 Create a timeline of the 10 most important events in AI history from 1950 to today. For each event, write 2-3 sentences explaining its significance and lasting impact on the field.
 
-<details>
-<summary>Hints</summary>
+</ExerciseBlock>
 
-1. Use Wikipedia, arxiv.org, and the resources below as starting points.
-2. Focus on why each milestone mattered, not just what happened.
-
-</details>
-
-:::
-
-:::tip[Exercise 4: AI Engineering vs. ML Research — intermediate]
+<ExerciseBlock title="Exercise 4: AI Engineering vs. ML Research" difficulty="intermediate" hints={["Think about the different skills, tools, and day-to-day activities.", "Consider what 'success' looks like in each role."]}>
 
 You're advising a computer science graduate who wants to work in AI. They ask: "Should I become an AI researcher or an AI engineer?" Write a comparison covering:
 
@@ -300,29 +285,21 @@ You're advising a computer science graduate who wants to work in AI. They ask: "
 
 Be specific—don't just list vague differences.
 
-<details>
-<summary>Hints</summary>
-
-1. Think about the different skills, tools, and day-to-day activities.
-2. Consider what 'success' looks like in each role.
-
-</details>
-
-:::
+</ExerciseBlock>
 
 ## Resources
 
-- **[Computing Machinery and Intelligence](https://academic.oup.com/mind/article/LIX/236/433/986238)** _(paper)_ by Alan Turing (1950) — The paper that started it all. Turing's original proposal for the imitation game and his arguments for machine intelligence.
+<ResourceCard title="Computing Machinery and Intelligence" url="https://academic.oup.com/mind/article/LIX/236/433/986238" type="paper" author="Alan Turing (1950)" description="The paper that started it all. Turing's original proposal for the imitation game and his arguments for machine intelligence." />
 
-- **[Attention Is All You Need](https://arxiv.org/abs/1706.03762)** _(paper)_ by Vaswani et al. (2017) — The paper that introduced the Transformer architecture—the foundation of every modern LLM.
+<ResourceCard title="Attention Is All You Need" url="https://arxiv.org/abs/1706.03762" type="paper" author="Vaswani et al. (2017)" description="The paper that introduced the Transformer architecture—the foundation of every modern LLM." />
 
-- **[AI: A Modern Approach](http://aima.cs.berkeley.edu/)** _(book)_ by Stuart Russell & Peter Norvig — The definitive AI textbook. Comprehensive coverage from search algorithms to deep learning.
+<ResourceCard title="AI: A Modern Approach" url="http://aima.cs.berkeley.edu/" type="book" author="Stuart Russell & Peter Norvig" description="The definitive AI textbook. Comprehensive coverage from search algorithms to deep learning." />
 
-- **[3Blue1Brown: Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)** _(video)_ by Grant Sanderson — Beautiful visual explanations of how neural networks learn. Essential viewing.
+<ResourceCard title="3Blue1Brown: Neural Networks" url="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" type="video" author="Grant Sanderson" description="Beautiful visual explanations of how neural networks learn. Essential viewing." />
 
-- **[The AI Revolution: The Road to Superintelligence](https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html)** _(tutorial)_ by Tim Urban (Wait But Why) — A long-form, accessible exploration of where AI is headed and why it matters.
+<ResourceCard title="The AI Revolution: The Road to Superintelligence" url="https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html" type="tutorial" author="Tim Urban (Wait But Why)" description="A long-form, accessible exploration of where AI is headed and why it matters." />
 
-- **[Stanford CS229: Machine Learning](https://cs229.stanford.edu/)** _(course)_ by Andrew Ng — The classic Stanford ML course. Rigorous mathematical foundations with practical applications.
+<ResourceCard title="Stanford CS229: Machine Learning" url="https://cs229.stanford.edu/" type="course" author="Andrew Ng" description="The classic Stanford ML course. Rigorous mathematical foundations with practical applications." />
 
 ---
 

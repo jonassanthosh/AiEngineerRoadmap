@@ -7,6 +7,19 @@ title: "Inference Optimization"
 
 # Inference Optimization
 
+:::info[What You'll Learn]
+- KV cache and why it matters for autoregressive generation
+- FlashAttention and memory-efficient attention
+- Continuous batching and PagedAttention (vLLM)
+- Speculative decoding for faster generation
+:::
+
+:::note[Prerequisites]
+[GPT Architecture](/curriculum/month-4/gpt-architecture) and [Quantization](quantization) from this month.
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~3 hours
+
 Training an LLM is expensive but happens once. **Inference** happens millions of times and determines your cost-per-token, user-perceived latency, and throughput. This lesson covers the techniques that make LLM inference fast: KV-caching, speculative decoding, continuous batching, Flash Attention, and PagedAttention.
 
 ## The Autoregressive Bottleneck

@@ -7,6 +7,20 @@ title: "RLHF: Reinforcement Learning from Human Feedback"
 
 # RLHF: Reinforcement Learning from Human Feedback
 
+:::info[What You'll Learn]
+- Why supervised fine-tuning alone isn't enough
+- Reward model training from human preferences
+- PPO for language model alignment
+- DPO as a simpler alternative to PPO
+- Common failure modes in preference learning
+:::
+
+:::note[Prerequisites]
+[Fine-Tuning Strategies](fine-tuning-strategies) from this month.
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~2 hours
+
 A language model trained on internet text can generate fluent text — but it can also produce harmful, dishonest, or unhelpful responses. **RLHF** is the training technique that transforms a raw language model into an assistant that follows instructions, refuses harmful requests, and provides genuinely useful answers. When OpenAI released ChatGPT in late 2022, it demonstrated the power of this approach to a global audience — and RLHF has since become a foundational ingredient behind ChatGPT, Claude, and every modern chat model.
 
 ## The Alignment Problem

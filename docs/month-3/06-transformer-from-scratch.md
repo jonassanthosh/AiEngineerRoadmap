@@ -7,6 +7,19 @@ title: "Building a Transformer from Scratch"
 
 # Building a Transformer from Scratch
 
+:::info[What You'll Learn]
+- Implementing multi-head attention in PyTorch
+- Building encoder and decoder layers
+- Positional encoding implementation
+- Assembling and testing a complete Transformer
+:::
+
+:::note[Prerequisites]
+[The Transformer Architecture](transformer-architecture) from this month.
+:::
+
+**Estimated time:** Reading: ~40 min | Exercises: ~4 hours
+
 In the previous lesson, you learned the theory behind every Transformer component. Now it's time to build one from the ground up in PyTorch and train it on a real task. By the end of this lesson, you'll have a fully working Transformer that can translate between two languages.
 
 We'll build each module independently, test it, then assemble them into a complete encoder-decoder Transformer.

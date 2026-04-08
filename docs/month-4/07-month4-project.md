@@ -7,6 +7,19 @@ title: "Project: Train a Language Model"
 
 # Project: Train a Language Model
 
+:::info[What You'll Learn]
+- Building a complete language model training pipeline
+- Data collection and preparation for pretraining
+- Training a small GPT model (5–50M parameters)
+- Generating and evaluating model outputs
+:::
+
+:::note[Prerequisites]
+All of Month 4 lessons 1–6.
+:::
+
+**Estimated time:** Reading: ~30 min | Project work: ~10 hours
+
 This is the Month 4 capstone project. You'll build a complete language model training pipeline from scratch — data collection, tokenization, model definition, training, evaluation, and text generation. Everything you've learned this month comes together here.
 
 :::tip[Project Scope]

@@ -7,6 +7,19 @@ title: "Serving and Deployment"
 
 # Serving and Deployment
 
+:::info[What You'll Learn]
+- Serving LLMs with vLLM and Ollama
+- Building REST APIs around model inference
+- Monitoring latency, throughput, and quality in production
+- Cost optimization strategies
+:::
+
+:::note[Prerequisites]
+[Inference Optimization](inference-optimization) from this month.
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~3 hours
+
 You've trained, fine-tuned, and optimized your model. Now you need to serve it to users. This lesson covers the practical engineering of deploying LLMs: choosing a serving framework, building APIs, monitoring production systems, and managing costs.
 
 ## Model Serving Architectures

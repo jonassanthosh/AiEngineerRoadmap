@@ -7,6 +7,19 @@ title: "BERT, T5, and Encoder-Decoder Models"
 
 # BERT, T5, and Encoder-Decoder Models
 
+:::info[What You'll Learn]
+- Encoder-only vs. decoder-only architectures
+- Masked language modeling (MLM) pretraining
+- BERT, RoBERTa, and their variants
+- When to use encoder models vs. decoder models
+:::
+
+:::note[Prerequisites]
+[GPT Architecture](gpt-architecture) from this month.
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~2 hours
+
 GPT showed the power of decoder-only models with next-token prediction. But that's not the only way to pretrain a Transformer. **BERT** uses an encoder-only architecture with masked language modeling, and **T5** uses a full encoder-decoder with a text-to-text framework. Understanding all three paradigms — encoder-only, decoder-only, and encoder-decoder — is essential for choosing the right model for a given task.
 
 ## Masked Language Modeling (BERT)

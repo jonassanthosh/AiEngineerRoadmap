@@ -7,6 +7,19 @@ title: "Capstone: Design a Novel Architecture"
 
 # Capstone: Design a Novel Architecture
 
+:::info[What You'll Learn]
+- Identifying weaknesses in existing architectures through paper analysis
+- Proposing and implementing architectural modifications
+- Setting up rigorous experimental evaluation
+- Writing a technical report documenting your findings
+:::
+
+:::note[Prerequisites]
+All of Month 6 lessons 1–6 and the full curriculum.
+:::
+
+**Estimated time:** Reading: ~25 min | Project work: ~15 hours
+
 This is the final capstone of the AI Engineering Academy. You'll do what research engineers do: identify a weakness in an existing architecture, propose a modification, implement it, and rigorously evaluate whether it helps. This project ties together everything you've learned — paper reading, architecture design, training, and evaluation.
 
 :::tip[This Is a Real Research Project]

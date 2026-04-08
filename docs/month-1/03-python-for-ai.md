@@ -7,6 +7,15 @@ slug: python-for-ai
 
 # Python for AI Engineering
 
+:::info[What You'll Learn]
+- NumPy arrays and vectorized operations
+- Data loading and manipulation with Pandas
+- Matplotlib for visualization
+- Writing clean, efficient ML experiment code
+:::
+
+**Estimated time:** Reading: ~40 min | Exercises: ~3 hours
+
 Python is the lingua franca of AI and machine learning. Not because it's the fastest language—it isn't—but because its ecosystem is unmatched: NumPy for numerical computing, Pandas for data manipulation, Matplotlib for visualization, PyTorch and TensorFlow for deep learning, and Hugging Face for working with pre-trained models.
 
 This chapter is a **crash course** in the three libraries you'll use daily: NumPy, Pandas, and Matplotlib. If you already know these well, skim through and try the exercises. If not, work through every code example—type them out, modify them, break them.

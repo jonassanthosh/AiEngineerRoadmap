@@ -7,6 +7,19 @@ title: "Transfer Learning"
 
 # Transfer Learning
 
+:::info[What You'll Learn]
+- Why pretrained models are powerful
+- Feature extraction vs. fine-tuning
+- Choosing and adapting pretrained models for new tasks
+- Practical fine-tuning recipes and pitfalls
+:::
+
+:::note[Prerequisites]
+[CNNs](cnns) and [Regularization](regularization) from this month.
+:::
+
+**Estimated time:** Reading: ~30 min | Exercises: ~3 hours
+
 Training a deep network from scratch requires large datasets and significant compute. **Transfer learning** lets you leverage a model that was already trained on a massive dataset (like ImageNet's 1.2 million images) and adapt it to your specific task — even if you only have a few hundred examples.
 
 ## What Is Transfer Learning and Why It Works

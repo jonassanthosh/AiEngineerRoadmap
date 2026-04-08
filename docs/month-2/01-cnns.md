@@ -7,6 +7,19 @@ title: "Convolutional Neural Networks"
 
 # Convolutional Neural Networks
 
+:::info[What You'll Learn]
+- How convolutions detect features in images
+- Pooling layers and why they help
+- Building CNN architectures (LeNet to ResNet)
+- Training a CNN on real image data
+:::
+
+:::note[Prerequisites]
+[Neural Networks Introduction](/curriculum/month-1/neural-networks-intro) and [Your First Model](/curriculum/month-1/your-first-model) from Month 1.
+:::
+
+**Estimated time:** Reading: ~30 min | Exercises: ~3 hours
+
 Images are high-dimensional — a modest 224×224 RGB photo has over 150,000 input features. A fully connected layer mapping that to just 1,000 hidden units would need **150 million** parameters. Convolutional Neural Networks (CNNs) solve this by exploiting the spatial structure of images: nearby pixels are more related than distant ones, and the same pattern (an edge, a texture) can appear anywhere in the frame.
 
 ## The Convolution Operation
@@ -361,22 +374,13 @@ This architecture should reach **~90% test accuracy** on CIFAR-10 within 20 epoc
 
 ## Exercises
 
-:::tip[Visualize Learned Filters — beginner]
+<ExerciseBlock title="Visualize Learned Filters" difficulty="beginner" hints={["Access the first conv layer weights with model.features[0].weight.data", "Normalize each filter to [0, 1] for display", "Use matplotlib's imshow with a grid layout"]}>
 
 After training the CIFAR-10 CNN, extract and visualize the 32 learned filters from the first convolutional layer. What patterns do you see? Do any resemble edge or color detectors?
 
-<details>
-<summary>Hints</summary>
+</ExerciseBlock>
 
-1. Access the first conv layer weights with model.features[0].weight.data
-2. Normalize each filter to [0, 1] for display
-3. Use matplotlib's imshow with a grid layout
-
-</details>
-
-:::
-
-:::tip[Implement a Residual Block — intermediate]
+<ExerciseBlock title="Implement a Residual Block" difficulty="intermediate" hints={["The residual connection adds the input to the block output: out = F(x) + x", "If channel dimensions change, use a 1x1 conv as a projection shortcut", "Place BatchNorm after each conv, and ReLU after each BatchNorm"]}>
 
 Implement a `ResidualBlock` module in PyTorch. It should support:
 - Two 3×3 convolutions with batch normalization and ReLU
@@ -385,38 +389,20 @@ Implement a `ResidualBlock` module in PyTorch. It should support:
 
 Then replace the plain conv blocks in the CIFAR-10 CNN with your residual blocks and compare accuracy.
 
-<details>
-<summary>Hints</summary>
+</ExerciseBlock>
 
-1. The residual connection adds the input to the block output: out = F(x) + x
-2. If channel dimensions change, use a 1x1 conv as a projection shortcut
-3. Place BatchNorm after each conv, and ReLU after each BatchNorm
-
-</details>
-
-:::
-
-:::tip[Receptive Field Analysis — advanced]
+<ExerciseBlock title="Receptive Field Analysis" difficulty="advanced" hints={["The receptive field grows by (kernel_size - 1) × product_of_previous_strides at each layer", "Pooling with kernel 2 and stride 2 doubles the effective stride", "For our 3-block CNN, compute layer by layer"]}>
 
 Calculate the theoretical receptive field of the final feature map in our CIFAR-10 CNN. Walk through each convolutional and pooling layer, tracking how the receptive field grows. Is the final receptive field large enough to "see" the entire 32×32 input?
 
-<details>
-<summary>Hints</summary>
-
-1. The receptive field grows by (kernel_size - 1) × product_of_previous_strides at each layer
-2. Pooling with kernel 2 and stride 2 doubles the effective stride
-3. For our 3-block CNN, compute layer by layer
-
-</details>
-
-:::
+</ExerciseBlock>
 
 ## Resources
 
-- **[CS231n: Convolutional Neural Networks for Visual Recognition](https://cs231n.stanford.edu/)** _(course)_ by Stanford / Andrej Karpathy — The gold-standard course on CNNs and computer vision. Lecture notes are freely available.
+<ResourceCard title="CS231n: Convolutional Neural Networks for Visual Recognition" url="https://cs231n.stanford.edu/" type="course" author="Stanford / Andrej Karpathy" description="The gold-standard course on CNNs and computer vision. Lecture notes are freely available." />
 
-- **[Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)** _(paper)_ by Kaiming He et al. — The ResNet paper — introduced skip connections and enabled training of 100+ layer networks.
+<ResourceCard title="Deep Residual Learning for Image Recognition" url="https://arxiv.org/abs/1512.03385" type="paper" author="Kaiming He et al." description="The ResNet paper — introduced skip connections and enabled training of 100+ layer networks." />
 
-- **[CNN Explainer](https://poloclub.github.io/cnn-explainer/)** _(tool)_ — Interactive visualization that lets you watch data flow through a CNN in real time.
+<ResourceCard title="CNN Explainer" url="https://poloclub.github.io/cnn-explainer/" type="tool" description="Interactive visualization that lets you watch data flow through a CNN in real time." />
 
-- **[PyTorch Vision Models](https://pytorch.org/vision/stable/models.html)** _(tutorial)_ — Official documentation for all pretrained models available in torchvision.
+<ResourceCard title="PyTorch Vision Models" url="https://pytorch.org/vision/stable/models.html" type="tutorial" description="Official documentation for all pretrained models available in torchvision." />

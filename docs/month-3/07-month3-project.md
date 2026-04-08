@@ -7,6 +7,19 @@ title: "Project: Text Classifier with Transformers"
 
 # Project: Text Classifier with Transformers
 
+:::info[What You'll Learn]
+- Building a Transformer-based text classifier from scratch
+- Comparing Transformer vs. LSTM performance on the same task
+- Implementing a complete training and evaluation pipeline
+- Analyzing attention patterns to interpret model behavior
+:::
+
+:::note[Prerequisites]
+All of Month 3 lessons 1–6.
+:::
+
+**Estimated time:** Reading: ~25 min | Project work: ~8 hours
+
 This capstone project brings together everything from Month 3. You'll build a **text classification model** using a Transformer encoder, train it on a real dataset, and compare it against an LSTM baseline. By the end, you'll have hands-on experience with the full pipeline — from data preprocessing to model evaluation.
 
 ## Project Overview

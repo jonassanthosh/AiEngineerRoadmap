@@ -7,6 +7,16 @@ slug: intro-to-ml
 
 # Introduction to Machine Learning
 
+:::info[What You'll Learn]
+- Supervised vs. unsupervised vs. reinforcement learning
+- The training/validation/test split methodology
+- Bias-variance tradeoff and overfitting
+- Key ML algorithms: linear regression, decision trees, SVMs
+- Evaluation metrics: accuracy, precision, recall, F1
+:::
+
+**Estimated time:** Reading: ~40 min | Exercises: ~3 hours
+
 Machine learning is the core technology behind modern AI. This chapter explains what ML is, how it differs from traditional programming, and introduces the fundamental concepts you'll use throughout your career as an AI engineer.
 
 ## What Is Machine Learning?

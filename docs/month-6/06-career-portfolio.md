@@ -7,6 +7,19 @@ title: "Building Your AI Engineering Career"
 
 # Building Your AI Engineering Career
 
+:::info[What You'll Learn]
+- AI engineering roles and how they differ (ML engineer, LLM engineer, research engineer, infra)
+- Building a portfolio that demonstrates real skills
+- Technical interview preparation
+- Navigating the AI job market
+:::
+
+:::note[Prerequisites]
+None specific — this lesson is accessible at any point, but most useful after completing the full curriculum.
+:::
+
+**Estimated time:** Reading: ~25 min | Exercises: ~4 hours
+
 You've spent six months building deep technical skills in AI and LLM engineering. This lesson helps you translate those skills into a career — whether you're entering the field for the first time, transitioning from another engineering role, or leveling up within AI.
 
 ## AI Engineering Roles

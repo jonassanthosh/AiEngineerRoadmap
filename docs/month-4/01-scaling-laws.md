@@ -7,6 +7,19 @@ title: "Scaling Laws and Emergent Abilities"
 
 # Scaling Laws and Emergent Abilities
 
+:::info[What You'll Learn]
+- Kaplan and Chinchilla scaling laws
+- How model size, data, and compute interact
+- Compute-optimal training: when to scale what
+- Practical implications for model design decisions
+:::
+
+:::note[Prerequisites]
+[The Transformer Architecture](/curriculum/month-3/transformer-architecture) and [Neural Networks Introduction](/curriculum/month-1/neural-networks-intro).
+:::
+
+**Estimated time:** Reading: ~30 min | Exercises: ~2 hours
+
 One of the most surprising discoveries in deep learning is that language model performance follows **predictable power laws** as you increase compute, data, and parameters. Even more striking: some capabilities only appear once models cross certain size thresholds — they are **emergent**.
 
 Understanding scaling laws is essential for anyone building or choosing LLMs. They tell you how to allocate your training budget and what to expect from larger models.
@@ -345,7 +358,7 @@ Raw loss (cross-entropy on a held-out set) is a useful proxy, but what practitio
 
 ## Exercises
 
-:::tip[Chinchilla-Optimal Sizing — beginner]
+<ExerciseBlock title="Chinchilla-Optimal Sizing" difficulty="beginner" hints={["Use C ≈ 6ND", "Chinchilla ratio is D ≈ 20N", "Solve for N in terms of C"]}>
 
 You have a compute budget of \( 10^{23} \) FLOPs. Using the Chinchilla scaling law (D ≈ 20N, C ≈ 6ND), calculate the optimal model size and dataset size. How does this compare to GPT-3 (175B params, 300B tokens)?
 
@@ -359,71 +372,33 @@ From \( C = 6ND = 6 \cdot N \cdot 20N = 120N^2 \):
 \( D = 20 \times 28.9B \approx 577B \) tokens
 
 GPT-3 used 175B params on 300B tokens with similar compute. Chinchilla says: use 6x fewer parameters but 2x more data.
-<details>
-<summary>Hints</summary>
 
-1. Use C ≈ 6ND
-2. Chinchilla ratio is D ≈ 20N
-3. Solve for N in terms of C
+</ExerciseBlock>
 
-</details>
-
-:::
-
-:::tip[Fit Your Own Scaling Law — intermediate]
+<ExerciseBlock title="Fit Your Own Scaling Law" difficulty="intermediate" hints={["Use scipy.optimize.curve_fit", "Try different functional forms: power law, log, polynomial", "Use log-log plotting to verify linearity"]}>
 
 Run a series of small training experiments using a simple model (e.g., a 2-layer Transformer) on a text dataset. Train models with 100K, 500K, 1M, 5M, and 10M parameters, recording the final validation loss. Fit a power law to the results and use it to predict the loss at 100M parameters. How close is your prediction?
 
-<div>
-**Solution approach:** Use the code from the "Extrapolating from small runs" example above. The key steps are:
-1. Train 5 models of different sizes to convergence (or fixed token budget)
-2. Record (parameter_count, final_loss) pairs
-3. Fit `L(N) = a * N^(-alpha)` using `curve_fit`
-4. Extrapolate and verify with a 100M parameter run
-<details>
-<summary>Hints</summary>
+</ExerciseBlock>
 
-1. Use scipy.optimize.curve_fit
-2. Try different functional forms: power law, log, polynomial
-3. Use log-log plotting to verify linearity
-
-</details>
-
-:::
-
-:::tip[Are Emergent Abilities Real? — advanced]
+<ExerciseBlock title="Are Emergent Abilities Real?" difficulty="advanced" hints={["Consider both exact-match and continuous metrics", "Think about what 'near random' means for different tasks", "Read the Schaeffer et al. counter-argument"]}>
 
 Read the Wei et al. (2022) paper on emergent abilities and the Schaeffer et al. (2023) critique. Write a 500-word analysis arguing for or against the existence of emergent abilities. Consider: does the distinction between discontinuous metrics and continuous metrics resolve the debate? Are there practical implications either way?
 
-<div>
-**Key points to address:**
-- Wei et al. show tasks where exact-match accuracy jumps from ~0% to ~50%+ at a certain model scale
-- Schaeffer et al. show that using log-likelihood (a continuous metric), performance improves smoothly
-- The practical question: even if the underlying improvement is smooth, does it matter that capabilities go from "unusable" to "usable" at a threshold?
-- Consider: is this like water boiling? Temperature rises smoothly but the phase transition is still real.
-<details>
-<summary>Hints</summary>
-
-1. Consider both exact-match and continuous metrics
-2. Think about what 'near random' means for different tasks
-3. Read the Schaeffer et al. counter-argument
-
-</details>
-
-:::
+</ExerciseBlock>
 
 ---
 
 ## Resources
 
-- **[Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)** _(paper)_ by Kaplan et al. — The original OpenAI scaling laws paper establishing power-law relationships between loss and compute/data/parameters.
+<ResourceCard title="Scaling Laws for Neural Language Models" url="https://arxiv.org/abs/2001.08361" type="paper" author="Kaplan et al." description="The original OpenAI scaling laws paper establishing power-law relationships between loss and compute/data/parameters." />
 
-- **[Training Compute-Optimal Large Language Models (Chinchilla)](https://arxiv.org/abs/2203.15556)** _(paper)_ by Hoffmann et al. — DeepMind's paper showing that models should be trained with roughly 20 tokens per parameter for compute efficiency.
+<ResourceCard title="Training Compute-Optimal Large Language Models (Chinchilla)" url="https://arxiv.org/abs/2203.15556" type="paper" author="Hoffmann et al." description="DeepMind's paper showing that models should be trained with roughly 20 tokens per parameter for compute efficiency." />
 
-- **[Emergent Abilities of Large Language Models](https://arxiv.org/abs/2206.07682)** _(paper)_ by Wei et al. — Comprehensive survey of capabilities that emerge only at large scale.
+<ResourceCard title="Emergent Abilities of Large Language Models" url="https://arxiv.org/abs/2206.07682" type="paper" author="Wei et al." description="Comprehensive survey of capabilities that emerge only at large scale." />
 
-- **[Are Emergent Abilities of LLMs a Mirage?](https://arxiv.org/abs/2304.15004)** _(paper)_ by Schaeffer et al. — A counter-argument suggesting emergence is an artifact of metric choice.
+<ResourceCard title="Are Emergent Abilities of LLMs a Mirage?" url="https://arxiv.org/abs/2304.15004" type="paper" author="Schaeffer et al." description="A counter-argument suggesting emergence is an artifact of metric choice." />
 
-- **[Scaling Laws Explained (Video)](https://www.youtube.com/watch?v=5Dy-JuQHVoY)** _(video)_ by Sasha Rush — An accessible walkthrough of scaling laws and their implications for LLM training.
+<ResourceCard title="Scaling Laws Explained (Video)" url="https://www.youtube.com/watch?v=5Dy-JuQHVoY" type="video" author="Sasha Rush" description="An accessible walkthrough of scaling laws and their implications for LLM training." />
 
-- **[The Scaling Hypothesis](https://gwern.net/scaling-hypothesis)** _(tutorial)_ by Gwern — A deep exploration of the scaling hypothesis and what it means for AI development.
+<ResourceCard title="The Scaling Hypothesis" url="https://gwern.net/scaling-hypothesis" type="tutorial" author="Gwern" description="A deep exploration of the scaling hypothesis and what it means for AI development." />

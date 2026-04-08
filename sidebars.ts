@@ -3,6 +3,11 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
   curriculumSidebar: [
     {
+      type: 'doc',
+      id: 'intro',
+      label: 'Welcome',
+    },
+    {
       type: 'category',
       label: 'Month 1: AI & ML Foundations',
       collapsible: true,

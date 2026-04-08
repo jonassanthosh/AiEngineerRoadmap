@@ -7,6 +7,19 @@ title: "Evaluation and Benchmarking"
 
 # Evaluation and Benchmarking
 
+:::info[What You'll Learn]
+- Standard LLM benchmarks (MMLU, HumanEval, GSM8K, etc.)
+- Designing custom evaluation suites for specific tasks
+- Human evaluation methodology
+- Pitfalls of benchmark-driven development
+:::
+
+:::note[Prerequisites]
+[RLHF](/curriculum/month-5/rlhf) and [Fine-Tuning Strategies](/curriculum/month-5/fine-tuning-strategies) from Month 5.
+:::
+
+**Estimated time:** Reading: ~35 min | Exercises: ~3 hours
+
 A model is only as good as your ability to measure it. Evaluation is deceptively difficult: choosing the wrong metric or benchmark can lead you to optimize for the wrong thing entirely. This lesson covers the full evaluation stack — from basic metrics to building custom evaluation suites and detecting benchmark contamination.
 
 ## Perplexity: The Baseline Metric

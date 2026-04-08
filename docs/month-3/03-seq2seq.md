@@ -7,6 +7,19 @@ title: "Sequence-to-Sequence Models"
 
 # Sequence-to-Sequence Models
 
+:::info[What You'll Learn]
+- Encoder-decoder architecture for sequence tasks
+- How seq2seq handles variable-length inputs and outputs
+- Teacher forcing during training
+- Limitations that motivated attention
+:::
+
+:::note[Prerequisites]
+[RNNs & LSTMs](/curriculum/month-2/rnns-lstms) from Month 2 and [Word Embeddings](word-embeddings) from this month.
+:::
+
+**Estimated time:** Reading: ~30 min | Exercises: ~2 hours
+
 Many of the most interesting NLP tasks involve transforming one sequence into another: translating English to French, summarizing a paragraph into a sentence, or converting a question into an answer. **Sequence-to-sequence (seq2seq)** models provide the foundational architecture for these tasks — and understanding them is essential before tackling attention and Transformers.
 
 ## The Encoder-Decoder Architecture
